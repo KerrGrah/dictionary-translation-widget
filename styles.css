@@ -1,0 +1,183 @@
+* {
+  focus: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.4em;
+}
+
+body, html {
+  background-color: #eee;
+}
+
+.container {
+  margin: 0 auto;
+  width: 84vw;
+  margin-top: 40px;
+  margin-bottom: 40px
+}
+
+.container h2, .container h3 {
+  text-align: center;
+}
+
+.container p {
+  margin-top: 20px;
+}
+
+.container p:first-of-type {
+  margin-top: 30px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.the-box {
+  font-family: arial, sans-serif;
+  color: #eee;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  background-color: #D09683;
+  opacity: 0.95;
+  border-radius: 2px;
+  z-index: 999;
+  transition: all 350ms ease-in-out;
+  text-align: center;
+  box-shadow: 3px 3px 15px #888
+}
+
+.the-box-head {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-color: #2d8471;
+}
+
+#box-head-text {
+  padding: 0;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.the-box.opened #box-head-text {
+  padding-top: 4px;
+}
+
+.the-box input[type=text] {
+  color: #000;
+  margin-top: 10px;
+  max-width: 94%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.the-box button {
+  margin: 7px;
+  margin-bottom: 0;
+  padding: 4px 6px;
+  background-color: #2d8471;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #eee;
+  cursor: pointer;
+}
+
+.the-box #search-container {
+  opacity: 0;
+  padding: 0 10px;
+  transition: opacity 300ms ease-in-out 500ms;
+}
+
+.the-box.opened #search-container {
+  opacity: 1;
+}
+
+#play-pronunciation {
+  margin: 0 0 0 10px;
+  padding: 2px 4px;
+  color: #fff;
+}
+
+#dict-content {
+  padding: 10px;
+  font-weight: 600;
+}
+
+#dict-content small {
+  font-size: 12px;
+  margin: 0;
+}
+
+#dict-content .translated-dict {
+  display: block;
+  line-height: 1.2;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 4px;
+  font-weight: 300
+}
+
+@media only screen and (max-width: 910px) {
+  .the-box {
+    left: 0;
+    width: 30px;
+    height: 25px;
+  }
+  .the-box-head {
+    height: 25px;
+  }
+  .the-box.opened {
+    width: 50vw;
+  }
+  .the-box.opened .the-box-head p {
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 911px) {
+  .the-box {
+    left: 3%;
+    width: 20vw;
+    height: 20px;
+  }
+  .the-box.opened {
+    width: 25vw;
+  }
+  .the-box.opened .the-box-head {
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  #dict-content {
+    padding: 4px;
+  }
+}
+
+#add-to-dict {
+  font-size: 12px;
+  padding: 4px 6px;
+}
+
+footer {
+  background-color: #ccc;
+  color: #666;
+  text-align: right;
+  padding: 10px;
+  padding-right: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+}
